@@ -1,7 +1,12 @@
 import React from 'react'
+import {BrowserRouter,Routes,Route,Link} from "react-router-dom"
+import Home from './pages/Home'
 
 const App = () => {
   return (
+    <BrowserRouter>
+
+
     <div className='m-w-1445 '>
       <div className="navbar bg-base-100 shadow-sm">
   <div className="navbar-start">
@@ -45,6 +50,10 @@ const App = () => {
   </div>
 </div>
 
+
+<Routes>
+  <Route path='/' element={<Home></Home>}></Route>
+</Routes>
 
 
 
@@ -99,6 +108,7 @@ const App = () => {
   </nav>
 </footer>
     </div>
+    </BrowserRouter>
   )
 }
 
